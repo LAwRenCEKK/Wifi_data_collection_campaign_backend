@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>    
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+      <meta name="robots" content="NONE,NOARCHIVE" />
+    <title>MDCC</title>
+        <link rel="stylesheet" type="text/css" href="/static/rest_framework/css/bootstrap.min.css"/>
+        <link rel="stylesheet" type="text/css" href="/static/rest_framework/css/bootstrap-tweaks.css"/>
+      <link rel="stylesheet" type="text/css" href="/static/rest_framework/css/prettify.css"/>
+      <link rel="stylesheet" type="text/css" href="/static/rest_framework/css/default.css"/>
+</head>
+
+
+<body class="">
+  <div class="wrapper">    
+      <div class="navbar navbar-static-top navbar-inverse">
+        <div class="container">
+          <span>
+              <a class='navbar-brand' rel="nofollow" href='http://www.django-rest-framework.org'>
+                  Welcome to McMaster Data Collection Campaign(MDCC) Project Website
+              </a>
+          </span>
+          <ul class="nav navbar-nav pull-right">              
+          </ul>
+        </div>
+      </div>
+      <div class="container">
+          <ul class="breadcrumb">        
+              <li class="active"><a href="/api/accounts/login/">Login to view uploaded data files</a></li>
+          </ul>
+ 
+      <!-- Content -->
+      <div id="content">
+              <div class="tabbable">
+                
+                  <ul class="nav nav-tabs form-switcher">
+                    <li>
+                      <a name='html-tab' href="#post-object-form" data-toggle="tab">MDCC Account</a>
+                    </li>
+ <!--                    <li>
+                      <a name='raw-tab' href="#post-generic-content-form" data-toggle="tab">Raw data</a>
+                    </li> -->
+                  </ul>
+                <div class="well tab-content">
+                  
+                    <div class="tab-pane" id="post-object-form">
+                      
+                        <form action="/api/accounts/weblogin/" method="POST" enctype="multipart/form-data" class="form-horizontal" novalidate>
+                          <fieldset>
+                            <input type='hidden' name='csrfmiddlewaretoken' value='iD2UWzj33Vj9INPSS1iBbKeX9MZGPSIo' />
+  
+    <div class="form-group ">
+  
+    <label class="col-sm-2 control-label ">
+      Email
+    </label>
+  <div class="col-sm-10">
+    <input name="email" class="form-control" type="email"  >
+  </div>
+</div>
+    <div class="form-group ">
+  
+    <label class="col-sm-2 control-label ">
+      Password
+    </label>
+  <div class="col-sm-10">
+    <input name="password" class="form-control" type="password"  >
+  </div>
+</div>
+    <div class="form-actions">
+        <button class="btn btn-primary" title="Make a POST request on the Login resource">Login</button>
+    </div>
+    </fieldset>
+</form>
+
+{% if messages %}
+<div class="messages">
+    {% for message in messages %}
+    <p>{{ message }}</p>
+    {% endfor %}
+    </div>
+{% endif %}
+
+</div>
+                  
+
+                  <div class="tab-pane" id="post-generic-content-form">
+                    
+                      <form action="/api/accounts/login/" method="POST" class="form-horizontal">
+                        <fieldset>
+                          
+
+
+  <div class="form-group">
+    <label for="id__content_type" class="col-sm-2 control-label">Media type:</label>
+    <div class="col-sm-10">
+      <select data-override="content-type" id="id__content_type" name="_content_type" class="form-control">
+<option value="application/json" selected="selected">application/json</option>
+<option value="application/x-www-form-urlencoded">application/x-www-form-urlencoded</option>
+<option value="multipart/form-data">multipart/form-data</option>
+</select>
+      <span class="help-block"></span>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="id__content" class="col-sm-2 control-label">Content:</label>
+    <div class="col-sm-10">
+      <textarea cols="40" data-override="content" id="id__content" name="_content" rows="10" class="form-control">
+</textarea>
+      <span class="help-block"></span>
+    </div>
+  </div>
+
+
+                          <div class="form-actions">
+                            <button class="btn btn-primary" title="Make a POST request on the Login resource">POST</button>
+                          </div>
+                        </fieldset>
+                      </form>
+                    
+                  </div>
+                </div>
+              </div>
+            
+
+            
+          
+      </div><!-- /.content -->
+    </div><!-- /.container -->
+  </div><!-- ./wrapper -->
+
+  
+    <script src="/static/rest_framework/js/jquery-1.11.3.min.js"></script>
+    <script src="/static/rest_framework/js/ajax-form.js"></script>
+    <script src="/static/rest_framework/js/csrf.js"></script>
+    <script src="/static/rest_framework/js/bootstrap.min.js"></script>
+    <script src="/static/rest_framework/js/prettify-min.js"></script>
+    <script src="/static/rest_framework/js/default.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('form').ajaxForm();
+        });
+    </script>
+  
+
+  
+
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+package ca.mcmaster.ilos.protobuf;
+option java_outer_classname = "ProtoData";
+
+message LatLon{
+    required double latitude = 1;
+    required double longitude = 2;
+}
+
+message RssItem{
+    required int32 scanNum = 1;
+    required int64 timestamp = 2;
+    required string bssid = 3;
+    optional string ssid = 4;
+    required int32 level = 5;
+    optional int32 frequency = 6;
+    optional LatLon location = 7;
+}
+
+message SensorData1D{
+    required float value = 1;
+    required int64 timestamp = 2;
+}
+
+message SensorData3D{
+    required float x = 1;
+    required float y = 2;
+    required float z = 3;
+    required int64 timestamp = 4;
+}
+
+message DataPack{
+    //Required fields, Point based or Path based
+    required string macID = 1;
+    required int32 collectMode = 2;
+    required string deviceInfo = 3;
+    required int64 deviceBootTime = 4;
+    required int64 startTime = 5;
+    required int64 terminalTime = 6;
+    required LatLon startLocation = 7;
+    //WiFi Data
+    repeated RssItem rssItems = 8;
+    //required For Path based scheme, for point based, equals to startLocation
+    optional LatLon terminalLocation = 9;
+    //Optional location information
+    optional string buildingName = 10;
+    optional int32 floorLevel = 11;
+    optional string room = 12;
+    //Step Event Data
+    repeated int64 stepEvents = 13;
+    //Sensor Data
+    repeated SensorData1D light = 14;
+    repeated SensorData3D gyroscope = 15;
+    repeated SensorData3D magnetic = 16;
+    repeated SensorData3D acceleration = 17;
+    repeated SensorData3D linearAcc = 18;
+    //Total Scan Number
+    optional int32 totalScans = 19;
+    //For calibration
+    optional int32 realStepNum = 20;
+    //For extra parameters that may potentially needed
+    optional int32 extraOne = 21;
+    optional string extraTwo = 22;
+}
+
+
+
+
+

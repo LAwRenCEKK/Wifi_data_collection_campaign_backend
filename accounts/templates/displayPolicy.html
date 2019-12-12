@@ -1,0 +1,267 @@
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>MacC Data Collection Campaign (MDCC)</title>
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700" rel="stylesheet" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <style type="text/css">
+html, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+#foot_wrap {
+    position: relative;
+}
+
+br {
+   line-height: 20%;
+}
+address { 
+    display: block;
+    font-style: italic;
+}
+body {
+	width: 960px;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background-color: #FFFFFF;
+    font-family: "Open Sans Condensed", Arial, Helvetica, Verdana, sans-serif;
+}	
+#container {
+    width: 960px;
+    margin-left: 180px;
+    margin-right: auto;
+    text-align: left;
+}
+#main {
+
+    background-color: #A6AFB6;
+    position: absolute;
+    left: 13%;
+    top: 34px;
+    height: 380px;
+    width: 722px;
+    z-index: 1;
+
+}
+
+#body_wrap {
+    position: relative;
+}
+#announcements {
+    background-color: #FFFFFF;
+    font-family: Helvetica, Arial, Verdana, sans-serif;
+    font-size: small;
+    position: relative;
+    left: 17px;
+    top: 30px;
+    width: 678px;
+    height: 302px;
+    overflow: auto;
+    padding: 5px 5px 5px 5px;
+    z-index: 2;
+}
+#announcements strong {
+
+    font-family: "Open Sans Condensed", Arial, Helvetica, Verdana, sans-serif;
+    color: #990033;
+    font-weight: bold;
+    font-size: medium;
+
+}
+#announcements b {
+
+    font-family: "Open Sans Condensed", Arial, Helvetica, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: medium;
+
+}
+#main_footer {
+
+    position: absolute;
+    height: 88px;
+    width: 414px;
+    top: 440px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 325px;
+
+}
+#text_footer {
+
+    position: absolute;
+    top: 509px;
+    width: 960px;
+    font-size: smaller;
+    color: #999999;
+    left: 4px;
+
+}
+#announcements p{
+	font-weight: bold;
+	margin-bottom: 8px;
+
+}
+.center {
+    display: block;
+    margin-top: 13px;
+    margin-bottom: -20px;
+    margin-left: 120px;
+    margin-right: auto;
+}
+
+#divOnTop { z-index: 1000; 
+	position: absolute;
+	top: 420px;
+    left: 420px;
+
+}
+
+	</style>
+</head>
+<body>
+	<div id="container">
+		<div id="avenue_logo">
+			<a href="http://macquest2.cas.mcmaster.ca/api/accounts/home/">
+                        <img src="{%static 'accounts/logo_header.jpg'%}" alt=" logo" width="410" height="41" class="center">
+		        </a>
+                </div>
+		<div id="body_wrap">
+			<div id="main">
+				<div id="announcements">
+					<strong>Termssss of Use and Policies for Mac Data Collection Campaign (MDCC)
+					</strong><br><br>
+					<p>The following policies and terms apply to all MDCC participants:</p>
+					<ul>
+						<li><a href='#c1'>Purpose of the Campaign</a></li>
+						<li><a href='#c2'>Procedures Involved in the Research</a></li>
+						<li><a href='#c3'>Potential Harms, Risks or Discomforts</a></li>
+						<li><a href='#c4'>Potential Benefits</a></li>
+						<li><a href='#c5'>Confidentiality</a></li>
+						<li><a href='#c6'>Participation and Withdrawal</a></li>
+						<li><a href='#c7'>Contacts</a></li>
+					</ul><br><br>
+
+					<p id='c1'><u>Purpose of the Campaign:</u></p>
+					<ul>
+						<li>Location fingerprint (Wi-Fi, magnetic signal) based indoor localization is promising since it needs no extra infrastructure. However, the pain point is that collecting the location dependent fingerprint is labor-intensive and time-consuming. Crowd-sourcing based paradigm is proposed to ease this issue by leveraging the power of collective cooperation. We are inviting you to take part in the data collection campaign. The collected data will be used to improve the campus map and provide a better localization service; on the other hand, the collected data will be used for crowd-sourcing related research.  
+  					</li></ul><br><br><br>
+
+					<p id='c2'><u>Procedures Involved in the Research:</u></p>
+					<ul>
+						<li>The data collection campaign will take place on the McMaster University campus. During the campaign, an Android device such as a smartphone is needed. To be involved in the campaign, you will need to download and install a data collection client App and register as a contributor. Then you can select which target building/floor to collect the fingerprint data (Wi-Fi and Magnetic Field data). After you reach the target location, you can begin the data collection process by opening the App and clicking some buttons, then the App will automatically collect the data of your current location. Tutorials of how to use the App can be found inside the App.
+					</li></ul><br><br><br>
+					
+					<p id ='c3'><u>Potential Harms, Risks or Discomforts:</u></p>
+					<ul>
+						<li><u>Physical Risks:</u>You need to monitor the cellphone screen when you are collecting the data. As such, during walking, there might be minor risks such as hit walls or bumps, slips. Please be careful and keep an eye on the surrounding environments while collecting the data.</li>
+						<br>
+						<li><u>Psychological Risks:</u> You may be worried that you do not know how to use the data collection App. We will provide a step by step tutorial to show how to collect the data.</li><br>
+						<li><u>Social Risks:</u> During the data collection stage, we will collect your personal information include McMaster email, department, your location and your device information (cellphone type) while you are collecting the data. However, the collected data will be stored at a private server inside McMaster university, and only the research members can access the data. After the data collection campaign and compensation has been processed, personal information will be stripped. Hopefully these measures can mitigate the social risks.</li>
+					</ul><br><br><br>
+
+					<p id='c4'><u>Potential Benefits:</u></p>
+					<ul>
+						<li>Firstly, we clarify that only actual data contribution will be compensated. Specifically, when you are downloading the app, registering, learning the tutorial about how to use the data collection App, you do not get compensation. You can get compensation once you begin to collect and upload data. When you upload data, a well-designed point system will calculate and record your points based on the amount of data. The points are the evidence for compensation. In this study, the contribution from different participants may vary quite a lot depending how much time they are willing to collect data.
+					
+						Two types of compensation are included. First, for participants from the business school who will register <b>2MA3</b>, they will get a maximum of <b>3 bonus credits or 3% of the course grade</b>. Second, a maximum of $1000 is going to be shared among the participants. Please note that the two types of compensation do not overlap, which means participants require course credit will not get monetary reward.
+							The compensation will be distributed by the points you obtained in total. Specifically, for the course credit, you can get <u>all 3 credits</u> if you reach the threshold point; otherwise, the course credit you can get is in proportional to the threshold point.  For the monetary <b>reward of $1000</b>, it will be divided based on the participants’ points. However, if the number of participants is too large, we will only reward the top contributors (e.g., top 100 contributors).
+							 A reputation ranking list will be provided to show the participants’ contribution, including the nicknames, points, departments. Please note that this is only the tentative compensation plan, and we reserve the right the update it.  Further details will be provided separately during the campaign.
+						</li>
+					</ul><br><br><br>
+					<p id='c5'><u>Confidentiality:</u>
+					</p>
+					<ul>
+						<li>
+							You are participating in this data collection campaign confidentially. We will not use your name or any information that would allow you to be identified. No one but the principal investigator and the co-investigator will know whether you were in the campaign unless you <b>choose</b> to tell others.
+						</li>
+					</ul><br><br><br>
+
+					<p id='c6'><u>
+						Participation and Withdrawal:
+					</u>
+						 
+					</p>
+					<ul>
+						<li>
+							Your participation in this campaign is voluntary. It is your choice to contribute to the better campus map. If you decide to quit for whatever reason, 
+even after you registered or accepted the task, you can just stop whenever you want. 
+<br>However, please note the following two rules:<br>
+(1)The compensation (course credit or monetary reward) will be distributed based on the points you already obtained. When you withdraw, you can still get compensation and the corresponding amount of compensation depends on the points. 
+<br>(2)Uploaded data will be retained for research purpose regardless of whether or not you withdraw.
+
+						</li>
+					</ul><br><br><br>
+					<p id='c7'><u>
+						Questions about the data collection campaign:</u>
+					</p>
+					If you have any question about the data collection campaign, please contact: <a href="mailto:weiy49@mcmaster.ca">weiy49@mcmaster.ca</a> 
+					<br><br><br>
+					<br>  
+					<p><u>Faculty Supervisor/Principal Investigator:</u></p>
+					<address>
+					Dr. Rong Zheng<br>                  
+					Department of Computing and Software<br>  
+					McMaster University<br>     
+					Hamilton, Ontario, Canada<br>   
+					(905) 525-9140 ext. 22891<br>   
+					E-mail: <a href="mailto:rzheng@mcmaster.ca">rzheng@mcmaster.ca</a> <br>
+					<br>
+					Dr. Ruhai Wu<br>                  
+					DeGroote School of Business<br>
+					McMaster University<br>     
+					Hamilton, Ontario, Canada<br>   
+					(905) 525-9140 ext. 23048 <br>  
+					E-mail: <a href="mailto:wuruhai@mcmaster.ca">wuruhai@mcmaster.ca</a> <br>
+					
+
+					<br>
+					Co-Investigator:<br>    
+					Yongyong Wei<br>
+					Department of Computing and Software<br>
+					McMaster University<br>
+					Hamilton, Ontario, Canada<br>
+					E-mail: <a href="mailto:weiy49@mcmaster.ca">weiy49@mcmaster.ca</a><br>
+					</address>
+
+				</div>
+			</div>
+		</div>
+		<div id="foot_wrap">
+			<div id="main_footer"><img src="{%static 'accounts/logo_footer.jpg'%}" alt="McMaster's Online Teaching and Learning Community supported by the Centre for Teaching and Learning" width="284" height="100">
+			</div>
+		
+			<div id="text_footer">
+				<br><br><hr align="center">
+				<div align="center">
+				© McMaster University | 1280 Main Street West | Hamilton, Ontario L8S 4L8 | 905-525-9140 | Terms of Use &amp; Privacy Policy</div>
+			</div>
+		</div>
+			
+		</div>
+</div>
+
+<div id='divOnTop' class='checkbox'>
+ <form method="post">
+ 	{% csrf_token %}
+
+        <div>
+
+                <input type="checkbox" name="checkbox" value="check" id="agree" /> I have read and agree to the Terms and Conditions and Privacy Policy
+                <input type="submit" name="submit" value="submit" />
+                </div>
+        </form>
+</div>
+
+</body>
+</html>

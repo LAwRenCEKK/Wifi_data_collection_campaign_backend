@@ -1,0 +1,55 @@
+<html><body>
+<h1>Profiles</h1>
+<ul id="test">
+    {% for profile in profiles %}
+    <li>Filename: {{ profile.Filename }}</li>
+    <li>Building: {{ profile.Building }}  Floor: {{ profile.Floor}}  Time:{{profile.Time}}</br></li>
+    <button type="button" onclick="post({fileName: '/{{ profile.Building }}/{{ profile.Floor}}/{{ profile.Filename }}'});">Download</button> 
+    {% endfor %}
+</ul>
+</body>
+</html>
+
+<!--
+<script>
+
+    function getEventTarget(e) {
+        e = e || window.event;
+        return e.target || e.srcElement; 
+        }
+
+    var ul = document.getElementById('test');
+        ul.onclick = function(event) {
+            var target = getEventTarget(event);
+            alert(target.innerHTML);
+                };
+</script>
+-->
+
+<script>
+
+function post(params, method='post') {
+    // The rest of this code assumes you are not using a library.
+    // It can be made less wordy if you use one.
+    const form = document.createElement('form');
+    form.method = method;
+    form.action = 'http://mdcc.cas.mcmaster.ca/api/accounts/download/';
+
+    for (const key in params) {
+        if (params.hasOwnProperty(key)) {
+        const hiddenField = document.createElement('input');
+        hiddenField.type = 'hidden';
+        hiddenField.name = key;
+        hiddenField.value = params[key];
+        form.appendChild(hiddenField);
+        }
+    }
+
+    document.body.appendChild(form);
+    form.submit();
+}
+</script>
+
+
+
+
